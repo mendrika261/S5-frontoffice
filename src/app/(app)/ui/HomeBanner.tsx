@@ -59,11 +59,6 @@ export default function HomeBanner() {
                                         votre achat</h3>
                                     <a data-animation="animated fadeInUp delay-10s" href={"/connexion" + URL_EXTENSION}
                                        className="btn btn-lg btn-round btn-theme">Commencer</a>
-                                    <a data-animation="animated fadeInUp delay-12s" href={LINK_APP_LINK}
-                                       className="btn btn-lg btn-round btn-white-lg-outline">Aller sur le site
-                                        <FontAwesomeIcon icon={faLink} className="icon" width="15" height="15"
-                                                         style={{marginLeft: '5px'}}/>
-                                    </a>
                                 </div>
                             </div>
                         </div>

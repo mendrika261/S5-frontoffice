@@ -33,10 +33,13 @@ export default function Message() {
         btn.target.classList.add("btn-loading");
         const response = await sendPost(API_URL+"messages", message);
         if(response!=null) {
+            // @ts-ignore
             template.lastElementChild!.innerHTML = messageArea.value;
             messageList.appendChild(template.cloneNode(true));
+            // @ts-ignore
             messageList.lastElementChild!.lastElementChild!.style.display = "block";
             messageList.scrollTop = messageList.scrollHeight;
+            // @ts-ignore
             messageArea.value = "";
         }
         btn.target.classList.remove("btn-loading");
