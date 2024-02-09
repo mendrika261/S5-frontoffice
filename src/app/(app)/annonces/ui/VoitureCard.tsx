@@ -1,60 +1,42 @@
-export default function VoitureCard() {
+import {getFile} from "@/app/utils/hooks";
+
+export default async function VoitureCard(annonce: any) {
     return (
         <div className="col-lg-6 col-md-6 col-sm-12">
             <div className="car-box">
-                <div className="car-thumbnail">
-                    <a href="car-details.html" className="car-img">
-                        <div className="listing-badges">
-                            <span className="featured">Featured</span>
-                        </div>
-                        <div id="carouselExampleIndicators1" className="carousel slide"
-                             data-ride="carousel">
-                            <ol className="carousel-indicators">
-                                <li data-target="#carouselExampleIndicators1" data-slide-to="0"
-                                    className="active"></li>
-                                <li data-target="#carouselExampleIndicators1"
-                                    data-slide-to="1"></li>
-                                <li data-target="#carouselExampleIndicators1"
-                                    data-slide-to="2"></li>
-                            </ol>
-                            <div className="carousel-inner">
-                                <div className="carousel-item active">
-                                    <img className="d-block w-100" src="assets/img/car-1.jpg"
-                                         alt="car"/>
-                                </div>
-                                <div className="carousel-item">
-                                    <img className="d-block w-100" src="assets/img/car-1.jpg"
-                                         alt="car"/>
-                                </div>
-                                <div className="carousel-item">
-                                    <img className="d-block w-100" src="assets/img/car-1.jpg"
-                                         alt="car"/>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
+                {annonce?.annonce?.voiture?.photos?.length > 0 ?
+                    <div className="car-thumbnail">
+                        <a href={"/annonces/details?annonce="+annonce.annonce.id+"&id="+annonce.annonce.voiture.id} className="car-img">
+                            <img className="d-block w-100 img-fluid" src={await getFile(annonce?.annonce?.voiture?.photos[0]?.lien)}
+                                 style={{height: '100%', width: '100%', objectFit: 'scale-down'}} />
+                        </a>
+                    </div>
+                    :
+                    <div className="car-thumbnail">
+                        <a href={"/annonces/details?annonce="+annonce.annonce.id+"&id="+annonce.annonce.voiture.id} className="car-img">
+                            <img className="d-block w-100 img-fluid" src="/assets/img/noimage.png"/>
+                        </a>
+                    </div>
+                }
                 <div className="detail">
                     <div className="heading clearfix">
                         <div className="title pull-left">
-                            <a href="car-details.html">Audi A7 TDI</a>
+                            <a href={"/annonces/details?annonce="+annonce.annonce.id+"&id="+annonce.annonce.voiture.id}>{annonce?.annonce?.voiture?.sortieVoiture?.modele?.voiture}</a>
                         </div>
                         <div className="price pull-right">
-                            $178,000
+                            MGA {annonce?.annonce?.prix}
                         </div>
                     </div>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting
-                        industry.
-                        Lorem Ipsum has been the</p>
+                    <p>{annonce?.annonce?.voiture?.description}</p>
                     <ul className="facilities-list clearfix">
                         <li className="bordered-right">
-                            <i className="flaticon-transport-4"></i> Sport
+                            <i className="flaticon-transport-4"></i> {annonce?.annonce?.voiture?.sortieVoiture?.boiteVitesse?.nom}
                         </li>
                         <li className="bordered-right">
-                            <i className="flaticon-road"></i> 17,000
+                            <i className="flaticon-road"></i> {annonce?.annonce?.voiture?.kilometrage} km
                         </li>
                         <li>
-                            <i className="flaticon-petrol"></i> Diesel
+                            <i className="flaticon-petrol"></i> {annonce?.annonce?.voiture?.sortieVoiture?.energie?.nom}
                         </li>
                     </ul>
                 </div>

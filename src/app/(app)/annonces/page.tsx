@@ -1,12 +1,46 @@
 "use client";
 
 import Recherche from "@/app/(app)/annonces/ui/Recherche";
-import Categorie from "@/app/(app)/annonces/ui/Categorie";
 import ClientOnly from "@/app/(app)/ui/ClientOnly";
 import VoitureCard from "@/app/(app)/annonces/ui/VoitureCard";
 import SubBanner from "@/app/(app)/ui/SubBanner";
+import {sendPost, useGet} from "@/app/utils/hooks";
+import {API_BASE_URL, API_URL} from "@/app/config";
+import {useEffect, useState} from "react";
 
 export default function ListAnnonce() {
+    const [marques, setMarques] = useGet(API_URL+"marques");
+    const [boiteVitesses, setBoiteVitesses] = useGet(API_URL+"boite_vitesses");
+    const [energies, setEnergies] = useGet(API_URL+"energies");
+    const [etatVoitures, setEtatVoitures] = useGet(API_URL+"etat-voitures");
+    const [pays, setPays] = useGet(API_URL+"pays");
+    const [data, setData] = useState<any>(
+        {
+            "modeleLike": "",
+            "marques": [],
+            "boiteVitesses": [],
+            "energie": [],
+            "etatVoiture": [],
+            "pays": []
+        }
+    );
+    const [annonces, setAnnonces] = useState<any>([]);
+
+    async function getAnnonces() {
+        const response = await sendPost(API_BASE_URL+"annonces/filter", data);
+        setAnnonces(response);
+    }
+
+    useEffect(() => {
+        getAnnonces();
+    }, []);
+
+    useEffect(() => {
+        console.log(annonces);
+        // scroll to top
+        window.scrollTo(0, 200);
+    }, [annonces]);
+
     return (
         <ClientOnly>
             <SubBanner titre="Les annonces"/>
@@ -15,8 +49,16 @@ export default function ListAnnonce() {
                     <div className="row">
                         <div className="col-lg-4 col-md-12">
                             <div className="sidebar mrb">
-                                <Recherche/>
-                                <Categorie/>
+                                <Recherche
+                                    marques={marques}
+                                    boiteVitesses={boiteVitesses}
+                                    energies={energies}
+                                    etatVoitures={etatVoitures}
+                                    pays={pays}
+                                    data={data}
+                                    setData={setData}
+                                    getAnnonces={getAnnonces}
+                                />
                             </div>
                         </div>
 
@@ -24,67 +66,16 @@ export default function ListAnnonce() {
                             <div className="option-bar d-none d-xl-block d-lg-block d-md-block d-sm-block">
                                 <div className="row clearfix">
                                     <div className="col-xl-4 col-lg-5 col-md-5 col-sm-5">
-                                        <h4 className="heading">20 Résultats</h4>
+                                        <h4 className="heading">{annonces ? annonces.length: "Chargement..."} Résultats</h4>
                                     </div>
                                 </div>
                             </div>
 
                             <div className="row">
-                                <VoitureCard/>
-
-                                <div className="col-lg-6 col-md-6 col-sm-12">
-                                    <div className="car-box">
-                                        <div className="car-thumbnail">
-                                            <a href="car-details.html" className="car-img">
-                                                <img src="assets/img/car-6.jpg" alt="car" className="img-fluid"/>
-                                            </a>
-                                        </div>
-                                        <div className="detail">
-                                            <div className="heading clearfix">
-                                                <div className="title pull-left">
-                                                    <a href="car-details.html">2016 Audi R8</a>
-                                                </div>
-                                                <div className="price pull-right">
-                                                    $178,000
-                                                </div>
-                                            </div>
-                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting
-                                                industry.
-                                                Lorem Ipsum has been the</p>
-                                            <ul className="facilities-list clearfix">
-                                                <li className="bordered-right">
-                                                    <i className="flaticon-transport-4"></i> Sport
-                                                </li>
-                                                <li className="bordered-right">
-                                                    <i className="flaticon-road"></i> 17,000
-                                                </li>
-                                                <li>
-                                                    <i className="flaticon-petrol"></i> Diesel
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-lg-12">
-                                    <div className="pagination-box">
-                                        <nav aria-label="Page navigation example">
-                                            <ul className="pagination">
-                                                <li className="page-item"><a className="page-link"
-                                                                             href="car-grid-rightside.html"><span
-                                                    aria-hidden="true">«</span></a></li>
-                                                <li className="page-item"><a className="page-link"
-                                                                             href="car-grid-rightside.html">1</a></li>
-                                                <li className="page-item"><a className="page-link active"
-                                                                             href="car-grid-leftside.html">2</a></li>
-                                                <li className="page-item"><a className="page-link "
-                                                                             href="car-grid-fullwidth.html">3</a></li>
-                                                <li className="page-item"><a className="page-link"
-                                                                             href="car-grid-fullwidth.html"><span
-                                                    aria-hidden="true">»</span></a></li>
-                                            </ul>
-                                        </nav>
-                                    </div>
-                                </div>
+                                {
+                                    annonces && annonces.map((annonce: any) =>
+                                    <VoitureCard key={annonce.id} annonce={annonce}/>)
+                                }
                             </div>
                         </div>
 

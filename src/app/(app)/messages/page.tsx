@@ -1,64 +1,85 @@
 "use client";
 
 import SubBanner from "@/app/(app)/ui/SubBanner";
-import VoitureBox from "@/app/(app)/voitures/ui/VoitureBox";
 import {useGet} from "@/app/utils/hooks";
-import {API_URL, URL_EXTENSION} from "@/app/config";
+import {API_URL} from "@/app/config";
 import Loading from "@/app/loading";
-
+import {useEffect, useState} from "react";
 
 
 export default function ListeMessage() {
-    const [voitures, setVoitures] = useGet(API_URL+"voitures");
+    const [data, setData] = useGet(API_URL+"messages");
+    const [utilisateur, setUtilisateur] = useState<any>();
+
+    useEffect(() => {
+        setUtilisateur(JSON.parse(localStorage?.getItem("utilisateur")!));
+    }, []);
+
+
+    function getUtilisateurDeDiscussion(data: any) {
+        let utilisateur = JSON.parse(localStorage?.getItem("utilisateur")!);
+        return data.utilisateur1 == utilisateur.id ? data.utilisateurObjet2 : data.utilisateurObjet1;
+    }
 
     return (
         <>
             <SubBanner titre="Mes messages" />
 
-            {voitures ?
+            {(data && data.length == 0) &&
+            <div className="container">
+                <div className="row mt-3">
+                    <div className="col-lg-12">
+                        <div className="card">
+                            <div className="card-body">
+                                <h6 className="text-center">Vous n&apos;avez pas encore de discussion, interagissez avec les annonces</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>}
+
+            {(data && data.length > 0) ?
                 <div className="car-list-fullwidth content-area-2">
                     <div className="container">
                         <div className="option-bar d-none d-xl-block d-lg-block d-md-block d-sm-block">
-                            <div className="row clearfix">
+                            {/*div className="row clearfix">
                                 <div className="col-xl-4 col-lg-5 col-md-5 col-sm-5">
                                     <h4 className="heading">0 Message(s) non lu</h4>
                                 </div>
-                            </div>
+                            </div>*/}
                         </div>
                         <div className="row">
                             <div className="col-lg-12">
-                                <div className="row mb-5">
-                                    <div className="col-12">
-                                        <a href={`/messages/ajouter${URL_EXTENSION}`} className="btn btn-md btn-theme col-12">
-                                            Nouvelle discussion
-                                            <span className="fa fa-plus mx-2"></span>
-                                        </a>
-                                    </div>
-                                </div>
 
                                 <div className="card">
                                     <div className="card-body">
                                         <div className="table-responsive">
                                             <table className="table table-hover">
                                                 <tbody>
-                                                <tr>
-                                                    <td>
-                                                        <a href="/">
-                                                            <div>
+                                                {data.map((discussion: any, index: number) =>
+                                                <tr key={index}>
+                                                        <td>
+                                                            <a href={"/messages/details?utilisateur="+getUtilisateurDeDiscussion(discussion).id}>
+                                                                <div>
                                                                 <span className="font-weight-bold">
-                                                                John doe
+                                                                {
+                                                                    utilisateur.id == discussion.utilisateur1 ?
+                                                                    discussion.utilisateurObjet2.nomComplet:
+                                                                    discussion.utilisateurObjet1.nomComplet
+                                                                }
                                                                 </span>
-                                                                <span
-                                                                    className="badge badge-danger badge-pill mx-2">1</span>
-                                                            </div>
-                                                            <div>
-                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                                                Nulla nec purus feugiat, molestie ipsum et, consequat
-                                                                nibh.
-                                                            </div>
-                                                        </a>
-                                                    </td>
+                                                                    {discussion.messages[0].sender != utilisateur.id &&
+                                                                    <span className="badge badge-danger badge-pill mx-2">
+                                                                        <span className={"fa fa-envelope"}></span>
+                                                                    </span>}
+                                                                </div>
+                                                                <div>
+                                                                    {discussion.messages[0].message.substring(0, 50)}
+                                                                </div>
+                                                            </a>
+                                                        </td>
                                                 </tr>
+                                                )}
                                                 </tbody>
                                             </table>
                                         </div>

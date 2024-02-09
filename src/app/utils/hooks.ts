@@ -20,7 +20,7 @@ async function handleErrors(error: any) {
         return;
     }
     if(error.response.status === 403) {
-        location?.replace('/404'+URL_EXTENSION);
+        location?.replace('/403'+URL_EXTENSION);
         return;
     }
     if (error?.response?.data?.message !== undefined && error?.response?.data?.message !== null)
@@ -58,8 +58,6 @@ export function useGet(url: string, childrenObjectOnlyId?: boolean): [any, Dispa
 
     return [data, setData];
 }
-
-
 
 
 export async function sendPost(url: string, form: any, noToast?: boolean) {

@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1637166-d2a0-44b2-a2bc-91036f5f9ed0" name="Changes" comment="fix: minor bugs, make android folder versioned" />
+    <list default="true" id="f1637166-d2a0-44b2-a2bc-91036f5f9ed0" name="Changes" comment="fix: minor bugs, make android folder versioned">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(app)/annonces/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(app)/annonces/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(app)/annonces/ui/Recherche.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(app)/annonces/ui/Recherche.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(app)/annonces/ui/VoitureCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(app)/annonces/ui/VoitureCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(app)/info.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(app)/info.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(app)/messages/ajouter/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(app)/messages/details/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(app)/messages/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(app)/messages/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/utils/hooks.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/utils/hooks.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,6 +45,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/mendrika/IdeaProjects/S5-frontoffice-automobile/src/app/(app)/messages/ajouter",
     "node.js.detected.package.eslint": "true",
@@ -44,6 +54,9 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "npm.dev.executor": "Run",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
     "ts.external.directory.path": "/Users/mendrika/IdeaProjects/S5-frontoffice-automobile/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
@@ -121,6 +134,8 @@
       <workItem from="1707313797161" duration="63000" />
       <workItem from="1707409102307" duration="3970000" />
       <workItem from="1707461275273" duration="5228000" />
+      <workItem from="1707466613748" duration="7645000" />
+      <workItem from="1707474928605" duration="11938000" />
     </task>
     <task id="LOCAL-00001" summary="feat: template, home page">
       <option name="closed" value="true" />
