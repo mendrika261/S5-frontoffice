@@ -1,0 +1,7 @@
+{
+  "name": "Fiara",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "custom"
+}

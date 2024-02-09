@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f1637166-d2a0-44b2-a2bc-91036f5f9ed0" name="Changes" comment="fix: minor bugs, make android folder versioned" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript JSX File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2akmHg2hfxIJUTQL8U6qzdV40Ev" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/mendrika/IdeaProjects/S5-frontoffice-automobile/src/app/(app)/messages/ajouter",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.dev.executor": "Run",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "ts.external.directory.path": "/Users/mendrika/IdeaProjects/S5-frontoffice-automobile/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mongo"
+    ]
+  }
+}]]></component>
+  <component name="ReactDesignerToolWindowState">
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.intellij.reactbuddy.reactComponents" value="false" />
+        <entry key="com.intellij.reactbuddy.reactInspector" value="false" />
+        <entry key="com.intellij.reactbuddy.storybook" value="false" />
+      </map>
+    </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app/(app)/messages/ajouter" />
+      <recent name="$PROJECT_DIR$/src/app" />
+      <recent name="$PROJECT_DIR$/android/app/src/main/res/mipmap" />
+      <recent name="$PROJECT_DIR$/android/app" />
+      <recent name="$PROJECT_DIR$/src/app/(app)/annonces/ajouter" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app/(app)/ui" />
+      <recent name="$PROJECT_DIR$/public/assets/img/logos" />
+      <recent name="$PROJECT_DIR$/public/assets" />
+      <recent name="$PROJECT_DIR$/public/static" />
+      <recent name="$PROJECT_DIR$/src/app" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.dev" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f1637166-d2a0-44b2-a2bc-91036f5f9ed0" name="Changes" comment="" />
+      <created>1704870864497</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1704870864497</updated>
+      <workItem from="1704870865708" duration="14357000" />
+      <workItem from="1704970981586" duration="14000" />
+      <workItem from="1704995510737" duration="2919000" />
+      <workItem from="1705061735871" duration="24873000" />
+      <workItem from="1705170704438" duration="26000" />
+      <workItem from="1706725305861" duration="8056000" />
+      <workItem from="1706855927441" duration="296000" />
+      <workItem from="1706856462711" duration="4925000" />
+      <workItem from="1706872022005" duration="13000" />
+      <workItem from="1706957254218" duration="6051000" />
+      <workItem from="1706977486613" duration="597000" />
+      <workItem from="1707123348250" duration="28087000" />
+      <workItem from="1707159803544" duration="8405000" />
+      <workItem from="1707200737346" duration="52701000" />
+      <workItem from="1707313797161" duration="63000" />
+      <workItem from="1707409102307" duration="3970000" />
+      <workItem from="1707461275273" duration="5228000" />
+    </task>
+    <task id="LOCAL-00001" summary="feat: template, home page">
+      <option name="closed" value="true" />
+      <created>1705074304269</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1705074304269</updated>
+    </task>
+    <task id="LOCAL-00002" summary="fix: client rendering">
+      <option name="closed" value="true" />
+      <created>1705084114222</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1705084114222</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat: inscription">
+      <option name="closed" value="true" />
+      <created>1706962548166</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1706962548166</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feat: connexion, deconnexion">
+      <option name="closed" value="true" />
+      <created>1707125294283</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1707125294283</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feat: ajouter voiture">
+      <option name="closed" value="true" />
+      <created>1707152438052</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1707152438052</updated>
+    </task>
+    <task id="LOCAL-00006" summary="feat: liste, ajouter voiture">
+      <option name="closed" value="true" />
+      <created>1707248051735</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1707248051735</updated>
+    </task>
+    <task id="LOCAL-00007" summary="feat: liste, ajouter annonce, modifier etat">
+      <option name="closed" value="true" />
+      <created>1707288935237</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1707288935237</updated>
+    </task>
+    <task id="LOCAL-00008" summary="feat: push notification annonce">
+      <option name="closed" value="true" />
+      <created>1707306964722</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1707306964722</updated>
+    </task>
+    <task id="LOCAL-00009" summary="fix: minor bugs, make android folder versioned">
+      <option name="closed" value="true" />
+      <created>1707412805960</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1707412805960</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="feat: template, home page" />
+    <MESSAGE value="fix: client rendering" />
+    <MESSAGE value="feat: inscription" />
+    <MESSAGE value="feat: connexion, deconnexion" />
+    <MESSAGE value="feat: ajouter voiture" />
+    <MESSAGE value="feat: liste, ajouter voiture" />
+    <MESSAGE value="feat: liste, ajouter annonce, modifier etat" />
+    <MESSAGE value="feat: push notification annonce" />
+    <MESSAGE value="fix: minor bugs, make android folder versioned" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: minor bugs, make android folder versioned" />
+  </component>
+</project>
